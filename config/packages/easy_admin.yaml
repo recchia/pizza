@@ -1,0 +1,15 @@
+easy_admin:
+    site_name: "Pizza's Toro"
+    entities:
+        Ingredient:
+          class: App\Entity\Ingredient
+          form:
+            fields:
+              - 'name'
+              - 'price'
+        Pizza:
+          class: App\Entity\Pizza
+          form:
+            fields:
+              - 'name'
+              - 'ingredients'
