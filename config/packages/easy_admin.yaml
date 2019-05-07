@@ -1,5 +1,10 @@
 easy_admin:
     site_name: "Pizza's Toro"
+    design:
+      menu:
+        - { label: 'Homepage', route: 'main' }
+        - Ingredient
+        - Pizza
     entities:
         Ingredient:
           class: App\Entity\Ingredient
