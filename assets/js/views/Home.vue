@@ -9,11 +9,11 @@
                   {{ error }}
             </div>
 
-            <div v-else-if="!hasPosts" class="notification is-warning">
+            <div v-else-if="!hasPizzas" class="notification is-warning">
                 No posts!
             </div>
 
-            <div v-else v-for="pizza in pizzas">
+            <div v-else v-for="pizza in filterByKeyword">
                 <Pizza :pizza="pizza"></Pizza>
             </div>
         </div>
@@ -31,10 +31,12 @@
         data () {
             return {
                 pizza: {},
+                keyword: '',
             };
         },
         created() {
             this.$store.dispatch('pizza/fetchPizzas');
+            this.$store.dispatch('pizza/filterByKeyword');
         },
         computed: {
             isLoading () {
@@ -46,12 +48,15 @@
             error () {
                 return this.$store.getters['pizza/error'];
             },
-            hasPosts () {
+            hasPizzas () {
                 return this.$store.getters['pizza/hasPizzas'];
             },
             pizzas () {
                 return this.$store.getters['pizza/pizzas'];
             },
+            filterByKeyword () {
+                return this.$store.getters['pizza/filterByKeyword']
+            }
         },
     }
 </script>

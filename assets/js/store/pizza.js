@@ -1,4 +1,5 @@
 import pizzaApi from '../api/pizza';
+import {getByKeyword} from '../util/filter';
 
 export default {
     namespaced: true,
@@ -6,6 +7,7 @@ export default {
         isLoading: false,
         error: null,
         pizzas: [],
+        keyword: '',
     },
     getters: {
         isLoading (state) {
@@ -22,6 +24,9 @@ export default {
         },
         pizzas (state) {
             return state.pizzas;
+        },
+        filterByKeyword (state) {
+            return getByKeyword(state.pizzas, state.keyword);
         }
     },
     mutations: {
