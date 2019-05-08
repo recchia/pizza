@@ -25,6 +25,10 @@ In ordet to run  tha app you need follow the next steps:
 
 `docker exec -ti pizza_php bin/console doctrine:migrations:migrate`
 
+#### Run tests
+
+`docker exec -ti pizza_php vendor/bin/phpunit --testdox`
+
 #### Create an admin user
 
 `docker exec -ti pizza_php bin/console app:create-admin-user <email> <password>`

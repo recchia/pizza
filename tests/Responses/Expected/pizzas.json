@@ -1,0 +1,14 @@
+[
+  {
+    "id": "@null@",
+    "name": "@string@",
+    "price": "@double@",
+    "ingredients": "@array@"
+  },
+  {
+    "id": "@null@",
+    "name": "@string@",
+    "price": "@double@",
+    "ingredients": "@array@"
+  }
+]
