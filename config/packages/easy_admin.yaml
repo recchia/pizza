@@ -5,6 +5,7 @@ easy_admin:
         - { label: 'Homepage', route: 'main' }
         - Ingredient
         - Pizza
+        - { label: 'Logout', route: 'app_logout' }
     entities:
         Ingredient:
           class: App\Entity\Ingredient
